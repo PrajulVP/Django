@@ -1,0 +1,113 @@
+
+<style>
+    body {
+        background-color: rgba(245, 245, 245, 0.952);
+    }
+
+    .container {
+        margin: auto;
+        margin-top: 40px;
+        width: 450px;
+        height: 600px;
+        background-color: rgb(162, 186, 196);
+        padding-top: 10px;
+        padding-left: 80px;
+        line-height: 55px;
+        border: 3px solid;
+        border-radius: 8px;
+        animation: mymove 3s infinite;
+    }
+
+    @keyframes mymove {
+        0%{
+            border-color: rgb(4, 255, 0);
+        }
+        35% {
+            border-color: rgb(223, 53, 53);
+        }
+        70%{
+            border-color: rgb(255, 0, 225);
+        }
+        100%{
+            border-color: rgb(0, 251, 255);
+        }
+    }
+
+    label {
+        font-size: large;
+    }
+
+    #name {
+        width: 60%;
+        padding: 8px;
+        margin-left: 27px;
+    }
+
+    #email {
+        width: 60%;
+        padding: 8px;
+        margin-left: 26px;
+    }
+
+    #password {
+        width: 60%;
+        padding: 8px;
+    }
+
+    textarea {
+        margin-left: 10px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-right: 90px;
+        font-size: 40px;
+    }
+
+    .submit {
+        width: 120px;
+        height: 2rem;
+        margin-left: 30px;
+        margin-top: 25px;
+    }
+
+    .cancel {
+        width: 120px;
+        height: 2rem;
+        margin-left: 40px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Enter your name" id="name" required><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter your password" id="password" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email id" id="email" required><br>
+
+        <label>Address:</label>
+        <textarea name="address" id="address" cols="34" rows="3"></textarea><br>
+
+        <label>Date of Birth &nbsp;</label>
+        <input type="date" name="date of birth" id="date" required><br>
+
+        <label>Gender:</label>&nbsp;
+        <input type="radio" name="gender" value="male" id="male">
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" value="female" id="female">
+        <label for="female">Female</label><br>
+
+        <a href="/login"><input type="submit" value="Submit" class="submit"></a>
+        <input type="submit" value="cancel" class="cancel">
+    </div>
+    </form>
+</body>
