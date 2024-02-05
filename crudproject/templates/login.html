@@ -1,0 +1,125 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .login {
+        margin: auto;
+        width: 550px;
+        height: 500px;
+        margin-top: 60px;
+        padding-top: 50px;
+        background: transparent;
+        background-color: rgb(162, 186, 196);
+        border: 3px solid;
+        border-radius: 30px;
+        box-shadow: 6px 4px 7px rgba(172, 172, 182, 0.2);
+        animation: mymove 3s infinite;
+    }
+
+    .content {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .h1 {
+        margin: auto;
+        color: #000;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+
+    label {
+        color: #000;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 28px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    input {
+        margin: auto;
+        font-size: medium;
+        font-weight: 200;
+        width: 400px;
+        padding: 10px 40px;
+        border-radius: 15px;
+        margin-top: 5px;
+    }
+
+    button {
+        width: 400px;
+        font-size: large;
+        color: #fff;
+        margin: auto;
+        background: rgb(21, 21, 184);
+        padding: 8px 9px;
+        padding-left: -10px;
+        border: 2px #000;
+        border-radius: 25px;
+    }
+
+    .a {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a:hover {
+        color: rgb(36, 28, 189);
+        font-size: medium;
+    }
+
+    #login {
+        margin-left: 80px;
+        color: #000000;
+        height: 12px;
+        width: 12px;
+    }
+
+    .remember {
+        color: rgb(0, 0, 0);
+    }
+
+    .register {
+        font-size: 17px;
+        color: #000000;
+        margin-left: 100px;
+    }
+    
+    .register a {
+        margin: auto;
+        color: #002aff;
+        font-size: 17px;
+        margin-left: 5px;
+    }
+
+</style>
+
+<body>
+    <form class="login" method="POST" action="/userlog/">
+        {% csrf_token %}
+        <div class="h1">
+            <h1>Login</h1>
+        </div><br><br>
+        <div class="content">
+            <div><label>Username</label></div>
+            <div><input type="text" name="username" placeholder="Enter your name"></div><br>
+            <div><label>Password</label></div>
+            <div><input type="password" name="password" placeholder="Enter your password"></div>
+            <div class="a">
+                <a href="">Forgot Password?</a>
+            </div><br>
+            <div>
+                <button type="submit">Login</button>
+            </div><br><br>
+            <div class="register">
+                <label>Not a member?</label>
+                <a href="/">Register</a>
+            </div>
+        </div>
+    </form>
+</body>
